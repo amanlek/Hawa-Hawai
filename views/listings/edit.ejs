@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawa-Hawai</title>
+</head>
+<body>
+    <h3>Edit details</h3>
+    <form method="POST" action="/listings/<%= editListing._id %>?_method=PUT">
+        <input  name="newlisting[title]" value="<%= editListing.title %>" type="text">
+        <br /><br />
+        <textarea  name="newlisting[description]"  type="text"><%= editListing.description %></textarea>
+        <br /><br />
+        <input  name="newlisting[image]" value="<%= editListing.image %>" type="text">
+        <br /><br />
+        <input name="newlisting[price]" value="<%= editListing.price %>" type="number" >
+        <br /><br />
+        <input  name="newlisting[location]" value="<%= editListing.location %>" type="text">
+        <br /><br />
+        <input  name="newlisting[country]" value="<%= editListing.country %>" type="text">
+        <br /><br />
+        <button>Edit</button>
+    </form>
+</body>
+</html>
